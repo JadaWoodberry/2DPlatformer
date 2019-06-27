@@ -10,7 +10,7 @@ public class enemyController : MonoBehaviour
     private Transform target;
     private PlayerController player;
     bool playerInZone = false;
-    bool hit = false;
+   // bool hit = false;
 
     // Start is called before the first frame update
     void Start()

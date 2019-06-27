@@ -2,24 +2,22 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyZone : MonoBehaviour
+public class BDScript : MonoBehaviour
 {
-    private Transform enemyposition;
     // Start is called before the first frame update
     void Start()
     {
-        enemyposition = GameObject.FindGameObjectWithTag("enemy").GetComponent<Transform>();
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        transform.position = enemyposition.position;
-
+        
     }
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("trigger"))
+        if (other.gameObject.CompareTag("Player"))
         {
             gameObject.SetActive(false);
 
